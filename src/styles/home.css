@@ -1,0 +1,32 @@
+.products-box{
+    display: flex;
+    margin: 0 auto;
+    margin-top: 3%;
+    width:75%;
+    max-width: 80%;
+    flex-wrap: wrap;
+    margin-bottom: 3%;
+}
+body{
+    overflow-x:hidden;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
+   
+  /* Handle */
+  ::-webkit-scrollbar-thumb {
+    background: #cbcacb89; 
+    border-radius: 10px;
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-thumb:hover {
+    background: #a4a3a489; 
+  }

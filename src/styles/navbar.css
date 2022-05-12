@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+header{
+    margin: 0 auto;
+    display:  flex;
+    background-color: white;
+    width: 100%;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.021);
+}
+.contnavbar{
+    display: flex;
+    margin: 0 auto;
+    width: 100%;
+    margin-top: 0.5%;
+    height: 30%;
+}
+.marketotologo{
+    width: 15%;
+    margin-left: 15%;
+    margin-top: -13px;
+}
+
+
+
+.search{
+    border: 2px solid black;
+    border-radius: 11px;
+    background-color: #EEECF9;
+    height: 40px;
+    width: 20%;
+    margin-left: 10%;
+}
+
+.searchtxt{
+    width: 16%;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+    position: absolute;
+    height: 40px;
+}
+
+.searchlogo{
+    margin-top: 5px;
+    border: none;
+    background: none;
+    margin-right: 0;
+    margin-left: 90%;
+}
+
+.searchlogo{
+    margin-top: -6px;
+    border: none;
+    background: none;
+    margin-right: 0;
+    margin-left: 89%;
+    width: 35px;
+}
+
+.contbut{
+    display: flex;
+    margin-left: 10%;
+    width: 30%;
+    margin-bottom: 5px;
+}
+button{
+    background-color: #EEECF9;
+    border: 2px solid black;
+    border-radius: 9px;
+    height: 90%;
+    width: 10%;
+    margin-top:1px ;
+    margin-left: 7px;
+    font-family: 'Roboto', sans-serif;
+}
+button img{
+    width: 110%;
+    margin-left: -1px;
+    margin-top: 1px;
+}
+
+.imgsrc{
+    margin-top: -2px;
+}
+
+p{
+    margin-left: 20px;
+}
+
+.su{
+    margin-left: 30px;
+}
+.buttonnav{
+    width: 3.5%;
+    margin-top: -1px;
+    margin-left: 15px;
+    position: absolute;
+}
+.iclog{
+    width: 80%;
+    margin-top: 5px;
+    margin-left: 1px;
+}
+
+.buttonnavv{
+    width: 17%;
+    margin-top: -1px;
+    margin-left: 85px;
+}
+
+.cart-indicator{
+    background-color: #d784dab8;
+    border-radius: 50%;
+    width: 25px;
+    height: 20px;
+    text-align: center;
+    position: absolute;
+    margin-left: 20px;
+    color: white;
+}

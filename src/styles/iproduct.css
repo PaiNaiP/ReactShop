@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+.productcont{
+    margin: 5px;
+    border: 3px solid black;
+    width: 208px;
+    border-radius: 18px;
+    padding: 0;
+}
+.imageproduct{
+    border-radius: 15px 15px 0 0;
+    margin-left: -0.5px;
+    margin-top: -0.7px;
+    width: 209px;
+}
+
+.tit-disc{
+    display: flex;
+    margin: 5px;
+    margin-left: 15PX;
+}
+.pr{
+    font-family: 'Roboto', sans-serif;
+    font-size: 24px;
+    font-weight: 600;
+    margin-left: 15px;
+    margin-top: 12px;
+}
+
+.tit-disc{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+}
+
+.discrip{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-left: 2PX;
+}
+
+.butshop{
+background-color: transparent;
+width: 40px;
+height: 40px;
+margin-top: 5px;
+margin-left: 70px;
+}
+.ingshop{
+margin: 1.5px;
+margin-top: 5px;
+    width: 22px;
+}
+
+.btnpr{
+    display: flex;
+}
+.prrrrcont{
+    display: flex;
+    margin: 0 auto;
+    width: 70%;
+}

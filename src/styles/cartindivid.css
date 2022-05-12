@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+body{
+    background: #F7F7F8;
+}
+
+.crdbod{
+    width: 65%;
+    background-color: white;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: -1px 1px 2px rgba(240, 240, 240, 0.2), 1px -1px 2px rgba(240, 240, 240, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(240, 240, 240, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(240, 240, 240, 0.5);
+}
+
+.cartname{
+    font-family: 'Roboto', sans-serif;
+    font-size: 38px;
+    margin: 20px;
+    font-weight: 500;
+    margin-top: 5px;   
+    border: 2px solid white;
+    height: 70px;
+    text-overflow: unset;
+}
+
+.cartp{
+    margin-left: 10px;
+}
+
+.productscard-box{
+    
+}
+.crrtpr{
+    border-top: 2px solid #CBCACB;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+.cartproductcont{
+    display: flex;
+    margin-top: 20px;
+}
+
+.tit-but-cart{
+    display: flex;
+   background-color: blueviolet;
+   padding: 0;
+}
+
+.informationcartprod{
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    margin: 20px;
+    margin-top: 50px;
+    display: flex;
+}
+
+.imageproductcart{
+    margin-bottom: 20px;
+    border-radius: 15px;
+}
+
+.titcart{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+.disccart{
+    display: flex;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+    color: #a1a1a1;
+}
+
+.slech{
+    margin-left: 5px;
+    margin-right: 5px;
+}
+
+.butplmincont{
+    display: flex;
+    border: 1px solid #CBCACB;
+    width: 70px;
+    border-radius: 10px;
+    margin-top: 10px;
+}
+
+.minplbutton{
+    width: 30px;
+    margin: 0;
+    height: 28px;
+    background-color: transparent;
+    border: none;
+    margin-left: 0.5px;
+}
+.srqcont{
+    margin-top: 0.5px;
+}
+.buttondel{
+    background: transparent;
+    border: none;
+    display: flex;
+    color: #a1a1a1;
+    font-family: 'Roboto', sans-serif;
+    margin-top:30px;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.deletecart{
+    font-family: 'Roboto', sans-serif;
+    margin-left: 2px;
+    margin-top: -1px;
+}
+
+.leftcont{
+    width: 90%;
+}
+
+.totalprcart{
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    text-align: right;
+    margin-left: -5px;
+}
+.pricecartcont{
+    display: flex;
+}
+
+.card_cont{
+    width: 28.5%;
+    background: white;
+    margin-left: 20px;
+    margin-top: 20PX;
+    margin-bottom: 20PX;
+    border-radius: 11PX;
+    box-shadow: -1px 1px 2px rgba(230, 230, 230, 0.2), 1px -1px 2px rgba(230, 230, 230, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(230, 230, 230, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(230, 230, 230, 0.5);
+    height: 280px;
+}
+.totaldisp{
+    display: flex;
+}
+.totalpricetopay{
+    display: flex;
+    margin-top: 20px;
+    margin-bottom:30px;
+}
+
+
+
+.totaltxt{
+    color: #bababa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    width: 100%;
+}
+
+.totalcount{
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    text-align: right;
+}
+
+.pricetottxt{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #bababa;
+    width: 100%;
+}
+
+.totalpricecent{
+    margin-top: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    text-align: right;
+}
+.tovarinfo{
+    margin: 40px;
+    border-bottom: 2px solid #bababa;
+}
+
+.cardnumbinp{
+    background-color: transparent;
+    border: 1px solid #bababa;
+    outline: none;
+    width: 91%;
+    border-radius: 11px;
+}
+
+body{
+    padding: 0;
+}
+
+.cardinfo{
+    margin: 40px;
+margin-top: -10px;
+}
+
+.cardnumbertxt{
+    color: #bababa;
+    font-family: 'Roboto', sans-serif;
+    font-size: 14px;
+}
+
+.Pay{
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+    width: 82%;
+    background-color: #A297DC;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin: 40px;
+    margin-top: 0;
+}
+
+.Pay:active{
+    background-color: #9687e1;
+}
+
+.oform-cont{
+    background: white;
+    margin:20px;
+}
+
+.of_pok{
+    margin: 20px;
+}

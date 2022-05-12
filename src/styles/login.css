@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.cont{
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    display: flex;
+}
+
+.roomimg{
+    width: 61%;
+    position: absolute;
+}
+
+h1{
+    margin-left: 65%;
+    margin-top: 5%;
+    font-size: 45px;
+}
+.cont-inp{
+    
+    margin-top: 10%;
+    margin-left: 65%;
+    position: absolute;
+}
+p{
+    font-family: 'Roboto', sans-serif;
+}
+
+input{
+    width: 195%;
+    border: 2px solid;
+    border-radius: 6px;
+    background-color: #EEECF9;
+    height: 45px;
+    font-family:  'Roboto', sans-serif;
+    font-size: 14px;
+    padding: 0 15px;
+}
+.login-btn{
+    margin-top: 32%;
+    width: 210%;
+    margin-left: -1%;
+    height: 50px;
+    background-color: #A297DC;
+    border-radius: 38px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+}
+.SignUp-Cont{
+    display: flex;
+    margin-top: 15px;
+}
+
+.SignUpLink{
+    margin-left:5px ;
+    color:  #A297DC;
+}

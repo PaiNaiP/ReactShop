@@ -1,0 +1,73 @@
+.inputupdate{
+    background-color: transparent;
+    width: 80%;
+    margin: 10px;
+    border: 1px solid rgb(170, 170, 170);
+}
+
+.cont-input-update{
+    margin-top: 10%;
+    margin-left: 20%;
+}
+
+.save-but{
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+    width: 90%;
+    background-color: #A297DC;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+    height: 40px;
+    text-align: center;
+    line-height: 37px;
+    margin-left: 8px;
+}
+.save-but:hover{
+    background-color: #b9b2d7;
+}
+
+
+.Delete{
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+    width: 90%;
+    background-color: #A297DC;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+    height: 40px;
+    text-align: center;
+    line-height: 37px;
+    margin-left: 8px;
+}
+.Delete:hover{
+    background-color: #b9b2d7;
+}
+
+.Cancel{
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+    width: 90%;
+    background-color: #A297DC;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 10px;
+    height: 40px;
+    text-align: center;
+    line-height: 37px;
+    margin-left: 8px;
+}
+.Cancel:hover{
+    background-color: #b9b2d7;
+}
+.cont-update{
+    display: flex;
+}
+
+.brawl{
+    height: 50%;
+    margin-top: 10%;
+    position: absolute;
+    margin-left: 60%;
+}

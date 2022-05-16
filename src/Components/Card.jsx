@@ -9,14 +9,18 @@ import { Fotter } from './Fotter';
 import '../styles/cartindivid.css'
 import { async } from '@firebase/util';
 import StripeCheckout from 'react-stripe-checkout';
+import map from '../img/Marketoto_13-05-2022_12-26-51.png'
+import bskt from '../img/Goodies - Crying.png'
 
 
 export const Card = () => {
+  const [pokup, setPokup] = useState(false)
   const [currentUse, setCurrentUse] = useState(null);
     const navigate = useNavigate();
-    const [pokup, setPokup] = useState(false)
+    const [pokupSum, setPokupSum] = useState([])
     function GetCurrentUser(){
         const [user, setUser] = useState(null);
+        
         
         useEffect(()=>{
           onAuthStateChanged(auth, (user) => {
@@ -53,21 +57,6 @@ export const Card = () => {
       useEffect(()=>{
         auth.onAuthStateChanged(user =>{
             if(user){
-            //    collection(db, 'Cart' + user.uid).om(snapshot=>{
-            //         const newCartProduct = snapshot.doc.map((doc)=>({
-            //             ID: doc.id,
-            //             ...doc.data(),
-            //         }))
-            //         setCartProducts(newCartProduct)
-            //     })
-            
-            // const q =  collection(db, "Card"+user.uid);
-            // onSnapshot(colRef, (snapshot) => {
-            //     snapshot.docs.forEach((doc) => {
-            //         setCartProducts((prev) => [ doc.data()])
-            //         //  console.log("onsnapshot", doc.data());
-            //     })
-            // })
             const q = query(collection(db, "Card"+user.uid));
                 const unsubscribe = onSnapshot(q, (querySnapshot) => {
                 const cities = [];
@@ -89,6 +78,7 @@ export const Card = () => {
       const cartProductIncrease = async(cartProduct)=>{
       let prdct = ''
       Product =cartProduct;
+      if(Product.qty<100){
       const q = query(collection(db, "Card"+currentUse.uid), where("title", "==", Product.title));
       const querySnapshot = await getDocs(q);
         querySnapshot.forEach((doc) => {
@@ -111,6 +101,7 @@ export const Card = () => {
         //    console.log('user is not definded')
         //  }
        })
+      }
       }
 
       const cartProductDecrease = async(cartProduct)=>{
@@ -169,8 +160,11 @@ export const Card = () => {
 
 
       
-
-
+    
+  // const handleImageMap = async()=>{
+  //      const img ="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A8838bbc88c7a4cd9f4b065fcc47617dab28489fb4e2f4edfd59fce138c370cc8&amp;width=553&amp;scroll=true"
+       
+  //     }
       const PayOnClc = async() =>{
        // debugger
         const uid = currentUse.uid
@@ -179,6 +173,7 @@ export const Card = () => {
           deleteDoc(doc(db, 'Card' + uid, snap.id))
         }
         setPokup(true)
+        setPokupSum(totalPrice)
       }
 
     
@@ -187,13 +182,9 @@ export const Card = () => {
       <>
     <Navbar user={user} totalProducts={cartProducts.length}/>
     
-      <div className="oform-cont">
-        <h1 className="of_pok">Покупка оформлена</h1>
-        <div className="txtof">Ваша покупка на сумму {totalPrice+'₽ '} была оформлена</div>
-        <div className="punkt">Вы скоро сможете забрать её из пункта выдачи</div>
-      </div>
+     
     
-    {/* {cartProducts.length > 0 &&(
+    {cartProducts.length > 0 &&(
       <div className="pricecartcont">
         <div className='crdbod'>
             <div className='cartname'><p className='cartp'>Card</p></div>
@@ -213,18 +204,40 @@ export const Card = () => {
               <div className="pricetottxt">TotalPriceToPay:</div>
               <div className="totalpricecent">{totalPrice+'₽'}</div>
             </div>
-          </div> */}
+          </div>
           {/* <div className="cardinfo">
             <div className="cardnumbertxt">Email</div>
             <input className='cardnumbinp' id='emval' type="email" value={eemail}/>
           </div> */}
-          {/* <button className="Pay" onClick={PayOnClc}>Pay With Card</button>
+          <button className="Pay" onClick={PayOnClc}>Pay With Card</button>
         </div>
-      </div> */}
-    {/* )} */}
-    {cartProducts.length < 1&& pokup==false&&(
-        <div>No products</div>
+      </div>
     )}
+    {cartProducts.length < 1&& pokup==true&&(
+         <div className="oform-cont">
+         <div className="pokinfocont">
+           <h1 className="of_pok">Покупка оформлена</h1>
+           <div className="sama-class-nazovi">
+             <div className="withoutmap">
+               <div className="txtof">Ваша покупка на сумму {pokupSum+'₽ '} была оформлена</div>
+               <div className="txtof">Вы скоро сможете забрать её из пункта выдачи</div>
+             </div>
+           </div>
+         </div>
+         <a href="https://yandex.ru/maps/?um=constructor%3A8838bbc88c7a4cd9f4b065fcc47617dab28489fb4e2f4edfd59fce138c370cc8&amp;source=constructorStatic" target="_blank">
+           <img className='map' src={map} alt=""  />
+         </a>
+       </div>
+    )}
+    {cartProducts.length < 1&& pokup==false&&(
+      <div className='minl'>
+        <div className="mmmmbskt">
+        <div className='storcr'>Your basket is crying because it's empty</div>
+        <img src={bskt} alt="" className="basckt" />
+        </div>
+        </div>
+    )}
+    
     <Fotter/>
     </>
   )

@@ -48,38 +48,79 @@ export const SignUp = () => {
     })
   }
   return (
-    <div className='cont'>
+
+    <div className='cont' >
       <img src={room} alt="" className='roomimg'/>
-      <h1>Sign Up</h1>
-      <form action="" className="cont-inp" autoComplete='false' 
-      onSubmit={handleSignUp}>
-      <div className="name">
-          <p>Name</p>
-          <input type="text" onChange={(e)=>setName(e.target.value)}
-          value ={Name} className="nametxt" />
-        </div>
-        <div className="email">
-          <p>Email</p>
-          <input type="email" className="emailtxt" onChange={(e)=>setEmail(e.target.value)}
-          value ={Email} />
-        </div>
-        <div className="password">
-          <p>Password</p>
-          <input type="password" onChange={(e)=>setPassword(e.target.value)}
-          value ={Password} className="passtxt" />
-        </div>
-        <button className="login-btn">Sign Up</button>
-        <div className="SignUp-Cont">
-          <div className="Dont">Have an account?</div>
-          <Link to="/SignIn" style={{ textDecoration: 'none' }}>
-          <div className="SignUpLink">Click here</div>
-          </Link>
-        </div>
-        </form>
+      <div className="cont-log2">
+        <h1>Sign Up</h1>
         {successMsg&&<>
-      <div className='success-msg'>{successMsg}</div>
-      <br></br>
-      </>}
+        <div className='success-msg'>{successMsg}</div>
+        <br></br>
+        </>}
+
+        {errorMsg&&<>
+        <div className='success-msg2'>{errorMsg}</div>
+        <br></br>
+        </>}
+        <form action="" autoComplete='off' onSubmit={handleSignUp}>
+          <div className="name">
+            <p>Name</p>
+            <input type="text" onChange={(e)=>setName(e.target.value)} value ={Name} className="nametxt" />
+          </div>
+          <div className="email">
+            <p>Email</p>
+            <input type="email" className="emailtxt" onChange={(e)=>setEmail(e.target.value)} value ={Email}/>
+          </div>
+          <div className="password">
+            <p>Password</p>
+            <input type="password" className="passtxt" onChange={(e)=>setPassword(e.target.value)} value ={Password}/>
+          </div>
+          <button className="login-btn">Sign In</button>
+          <div className="SignUp-Cont">
+            <div className="Dont">Already have an account?</div>
+            <Link to="/SignIn" style={{ textDecoration: 'none' }}>
+            <div className="SignUpLink">Click here</div>
+            </Link>
+          </div>
+        </form>        
       </div>
+    </div>
+    // <div className='cont'>
+
+    //   <img src={room} alt="" className='roomimg'/>
+    //   <h1 className='signuptxt'>Sign Up</h1>
+      
+    //   <div className='success-msg'>{successMsg}</div>
+    //   <br></br>
+      
+    //   <form action="" className="cont-inp" autoComplete='false' 
+    //   onSubmit={handleSignUp}>
+    //     <div className="cont-reg">
+    //   <div className="name">
+    //       <p>Name</p>
+    //       <input type="text" onChange={(e)=>setName(e.target.value)}
+    //       value ={Name} className="nametxt" />
+    //     </div>
+    //     <div className="email">
+    //       <p>Email</p>
+    //       <input type="email" className="emailtxt" onChange={(e)=>setEmail(e.target.value)}
+    //       value ={Email} />
+    //     </div>
+    //     <div className="password">
+    //       <p>Password</p>
+    //       <input type="password" onChange={(e)=>setPassword(e.target.value)}
+    //       value ={Password} className="passtxt" />
+    //     </div>
+    //     <button className="login-btn">Sign Up</button>
+    //     <div className="SignUp-Cont">
+    //       <div className="Dont">Have an account?</div>
+    //       <Link to="/SignIn" style={{ textDecoration: 'none' }}>
+    //       <div className="SignUpLink">Click here</div>
+    //       </Link>
+    //     </div>
+    //     </div>
+    //     </form>
+        
+    //   </div>
   )
 }

@@ -1,44 +1,170 @@
-import React from 'react'
+import React, {useEffect, useState} from 'react'
 import logo from '../img/marketoto.svg'
 import searchlog from '../img/Search.svg'
 import '../styles/navbar.css'
 import shoppingcart from '../img/Shopping_cart.svg'
 import heart from '../img/Heart.svg'
 import person from '../img/Person.svg'
-import { auth } from '../config/config'
+import { auth, db } from '../config/config'
 import { useNavigate, Link } from 'react-router-dom'
+import {AiOutlineSearch} from 'react-icons/ai'
+import {BsPerson} from 'react-icons/bs'
+import {BiCartAlt} from 'react-icons/bi'
+import {FiLogOut} from 'react-icons/fi'
+import { collection, getDocs, doc, getDoc, onSnapshot } from 'firebase/firestore'
+import { async } from '@firebase/util'
+import { Search } from './Search'
+import $ from 'jquery'
+import { onAuthStateChanged, getAuth } from 'firebase/auth'
 
-export const Navbar = ({user, totalProducts}) => {
-
+export const Navbar = ({user, totalProducts, uidl}) => {
+const [uikl, setUikl] = useState([])
+const [provAdmin, setProvAdmin] = useState([])
+const [provSuch, setProvSuch] = useState([])
+  console.log(uidl)
+  console.log(user)
   const navigate = useNavigate();
   const handleLogout=()=>{
     auth.signOut().then(()=>{
       navigate('/SignIn')
     })
   }
+  console.log(user)
+  const [search, setSearch] = useState('')
+  const [value, setValue] = useState('')
+  const [prdcts, setPrdcts] =useState([])
+  const [result, setResult] = useState([])
+  const [currentUse, setCurrentUse] = useState(null);
+  const prodAll = async()=>{
+    const kk = []
+    const querySnapshot = await getDocs(collection(db, 'products'))
+    querySnapshot.forEach((doc)=>{
+      kk.push(doc.data().title);
+    })
+    setPrdcts(kk)
+  }
+   useEffect(()=>{
+    prodAll()
+    console.log(prdcts)
+   },[])
+  
+   const filteredProducts = prdcts.filter(products=>{
+     return products.toLowerCase().includes(value.toLowerCase())
+   })
+   
+
+   $("#input").on("input", function() {
+    setResult(this.value.length);
+});
+
+function GetCurrentUser(){
+  const [user, setUser] = useState(null);
+  
+  
+  useEffect(()=>{
+    onAuthStateChanged(auth, (user) => {
+      
+      if(user){
+        const docRef = doc(db, "users", user.uid);
+        getDoc(docRef).then(snapshot=>{
+          setUser(snapshot.data().Name)
+          
+        })
+        setCurrentUse(user)
+      }
+      else{
+        setUser(null)
+      }
+    })
+  }, [])
+  return user;
+}
+
+console.log(currentUse)
+let users = ''
+let uid = ''
+let emailforadmin = ''
+const returnUserInfo = async(userr)=>{
+  
+  console.log(userr)
+  const uidd = userr.uid;
+  console.log(uidd)
+  const unsub = onSnapshot(doc(db, "users", uidd), (doc) => {
+    users = doc.data().Name
+    emailforadmin = doc.data().Email
+    uid = uidd
+    console.log(uid)
+    setUikl(uid)
+    console.log(uidd)
+    setProvSuch(emailforadmin)
+   
+});
+console.log(users)
+}
+  const currentUser = async()=>{
+    
+    const authh = getAuth();
+onAuthStateChanged(authh, (userr) => {
+  
+  if(userr){
+    console.log(userr)
+   returnUserInfo(userr)
+   console.log(currentUse)
+  }
+  else{
+    users='t'
+    console.log(users)
+    
+  }
+  setProvAdmin(userr)
+
+    // ...
+  
+  
+});
+  }
+
+currentUser()
+// const handleClickAccount=() =>{
+// navigate('/Account')
+// }
   return (
     
     <div>
-       {!user&&<>
+      
+      {!provAdmin&&<>
         <header>
           <div className='contnavbar'>
+           <Link to="/" >
             <img src={logo} alt="" className='marketotologo'/>
+            </Link>
             <div className="search">
-              <input type="text" className='searchtxt' />
-              <button className='searchlogo'><img className='searchlogoo' src={searchlog} alt="" /></button>
+              <div className="res">
+              <input type="text" className='searchtxt'
+              onChange={(e)=>setValue(e.target.value)} id='input'/>
+              {result>0&&<>
+              <div className='searchBack'>
+              <Search products={filteredProducts} />
+              </div>
+              </>
+              }
+              </div>
+              <div className="searchlogo">
+                <AiOutlineSearch/>
+              </div>
             </div>
             <div className="contbut">
-              <Link to="/SignIn">
+              <a href="/SignIn" className='su'>
                 <p>Sign In</p>
-                </Link>
-                <Link to="SignUp" className='su'>
+                </a>
+                <a href="SignUp" className='su'>
                 <p>Sign Up</p>
-                </Link>
+                </a>
             </div>
           </div>
         </header>
         </>}
-      {user&&<>
+      {provAdmin&&provSuch!='admin@admin.com'&&<>
         {/* <header>
           <div className="cont">
             <img src={logo} alt="" className='marketotologo' />
@@ -55,23 +181,55 @@ export const Navbar = ({user, totalProducts}) => {
         </header> */}
         <header>
           <div className='contnavbar'>
+          <Link to="/" >
             <img src={logo} alt="" className='marketotologo'/>
+            </Link>
             <div className="search">
-              <input type="text" className='searchtxt' />
-              <button className='searchlogo'><img className='searchlogoo' src={searchlog} alt="" /></button>
+              <div className="res">
+              <input type="text" className='searchtxt'
+              onChange={(e)=>setValue(e.target.value)} id='input'/>
+              {result>0&&<>
+              <div className='searchBack'>
+              <Search products={filteredProducts} />
+              </div>
+              </>
+              }
+              </div>
+              <div className="searchlogo">
+                <AiOutlineSearch/>
+              </div>
             </div>
             <div className="contbut">
-            <p>{user}</p>
+            {/* <p>{user}</p> */}
+            
+            <Link key={user} to={`/Account/${uikl}`} >
+            <div className="pers" >
+            <BsPerson/>
+            </div>
+            </Link>
             <Link to="/Card" >
-              <button className='buttonnav'><img src={shoppingcart} alt="" className='iclog'/>
-              </button>
+              <div className="cartic">
+              <BiCartAlt/>
+              </div>
             </Link>
             <span className='cart-indicator'>{totalProducts}</span>
-            <button className='buttonnavv' onClick={handleLogout}>Log Out</button>
+            <button className='buttonnavv' onClick={handleLogout}><FiLogOut/></button>
             </div>
           </div>
         </header>
         </>}
+       
+        {provSuch==='admin@admin.com'&&
+         <header>
+         <div className='contnavbar'>
+         <Link to="/" >
+           <img src={logo} alt="" className='marketotologo'/>
+           </Link>
+           <button className='buttonnavv' onClick={handleLogout}><FiLogOut/></button>
+           </div>
+         
+       </header>
+        }
     </div>
   )
 }

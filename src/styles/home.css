@@ -30,3 +30,60 @@ body{
   ::-webkit-scrollbar-thumb:hover {
     background: #a4a3a489; 
   }
+
+  .add-to-product-button{
+    width: 65%;
+    background-color: #a297dca4;
+    margin: 0 auto;
+    height: 100px;
+    margin-left: 230px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    color: white;
+  }
+
+  .add-to-product-button:hover{
+    background-color: #9081d9a4;
+  }
+
+  .add-to-kategories-button{
+    width: 65%;
+    background-color: #a297dca4;
+    margin: 0 auto;
+    height: 100px;
+    margin-left: 230px;
+    margin-top: 40px;
+    border-radius: 10px;
+    text-align: center;
+    line-height: 100px;
+    font-size: 30px;
+    color: white;
+    margin-bottom: 40px;
+  }
+
+  .add-to-kategories-button:hover{
+    background-color: #9081d9a4;
+  }
+
+.image-container{
+  margin: 0 auto;
+  margin-left: 24%;
+
+
+}
+
+.slide-container{
+  margin-top: 40px;
+}
+
+.react-slideshow-container .default-nav:first-of-type{
+margin-top: -7px;
+margin-left: 0px;
+}
+.react-slideshow-container .default-nav:last-of-type {
+  margin-top: -7px;
+
+}

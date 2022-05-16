@@ -68,8 +68,8 @@ export const IndividualCartProduct = ({cartProduct, cartProductIncrease, cartPro
               <div className="desctcart">{cartProduct.description}</div>
           </div>
           <div className="butplmincont">
-            <button className='minplbutton' onClick={handleCartProductDecrease}><AiOutlineMinus/></button>
-            <div className="srqcont">{cartProduct.qty}</div>
+            <button className='minplbutton'  onClick={handleCartProductDecrease}><AiOutlineMinus/></button>
+            <div className="srqcont" id='srqcont'>{cartProduct.qty}</div>
             <button className='minplbutton' onClick={handleCartProductIncrease}><AiOutlinePlus/></button>
           </div>
       </div>

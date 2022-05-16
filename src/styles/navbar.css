@@ -14,49 +14,53 @@ header{
     height: 30%;
 }
 .marketotologo{
-    width: 15%;
-    margin-left: 15%;
-    margin-top: -13px;
+    width: 50%;
+    margin-left: 50%;
+    margin-top: 0;
 }
 
 
 
 .search{
-    border: 2px solid black;
+    border: 1px solid rgb(152, 152, 152);
     border-radius: 11px;
-    background-color: #EEECF9;
     height: 40px;
     width: 20%;
     margin-left: 10%;
+    margin-top: 2px;
+    display: flex;
 }
 
 .searchtxt{
-    width: 16%;
+    width: 130%;
     background-color: transparent;
     border: none;
     outline: none;
     font-family: 'Roboto', sans-serif;
     font-size: 14px;
-    position: absolute;
+    background-color: transparent;
     height: 40px;
 }
 
-.searchlogo{
-    margin-top: 5px;
+/* .searchlogo{
+    margin-top: 6px;
     border: none;
     background: none;
     margin-right: 0;
     margin-left: 90%;
-}
+} */
 
 .searchlogo{
-    margin-top: -6px;
+    margin-top: 8px;
     border: none;
     background: none;
-    margin-right: 0;
-    margin-left: 89%;
-    width: 35px;
+    margin-right: 2px;
+    width: 27px;
+    font-size: 20px;
+    margin-left: 27%;
 }
+
+
 
 .contbut{
     display: flex;
@@ -65,19 +69,19 @@ header{
     margin-bottom: 5px;
 }
 button{
-    background-color: #EEECF9;
+    /* background-color: #EEECF9;
     border: 2px solid black;
     border-radius: 9px;
     height: 90%;
     width: 10%;
     margin-top:1px ;
     margin-left: 7px;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Roboto', sans-serif; */
 }
 button img{
-    width: 110%;
+    /* width: 110%;
     margin-left: -1px;
-    margin-top: 1px;
+    margin-top: 1px; */
 }
 
 .imgsrc{
@@ -104,18 +108,76 @@ p{
 }
 
 .buttonnavv{
-    width: 17%;
-    margin-top: -1px;
-    margin-left: 85px;
+    width: 20px;
+    font-size: 33px;
+    margin-left: 15px;
+    color: #959596;
+    background-color: transparent;
+    border: none;
+    margin-top: 0;
 }
 
 .cart-indicator{
-    background-color: #d784dab8;
-    border-radius: 50%;
+    background-color: #A297DC;
+    border-radius: 15%;
     width: 25px;
-    height: 20px;
     text-align: center;
     position: absolute;
-    margin-left: 20px;
+    margin-left: 35px;
     color: white;
+    align-content: center;
+    text-align: center;
+    
+}
+
+
+.pers{
+    font-size: 35px;
+    color: #959596;
+    margin-top: 3px;
+    
+}
+
+.cartic{
+    font-size: 35px;
+    margin-top: 3px;
+    margin-left: 15px;
+    color: #959596;
+}
+
+.su{
+    text-decoration: none;
+    color: #959596;
+    margin-top: -2px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.su:hover{
+    color: #7a7a7a;
+}
+
+.su:active{
+    color: #7a7a7a;
+}
+
+.searchBack{
+    background: rgb(255, 255, 255);
+    position: absolute;
+    width: 19.85%;
+    margin-top: -5px;
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.319);
+    border-left: 1px solid rgb(152, 152, 152) ;
+    border-right: 1px solid rgb(152, 152, 152) ;
+    border-bottom: 1px solid rgb(152, 152, 152) ;
+    margin-left: -1px;
+}
+
+.searchone{
+    margin: 10px;
+}
+
+
+.srchn:hover{
+    background: #f1f1f1;
 }

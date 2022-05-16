@@ -1,0 +1,119 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.cont-account-information{
+    background-color: white;
+    margin: 20px;
+    height: 500px;
+    border-radius: 15px;
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+}
+
+.account-name{
+    font-family: 'Roboto', sans-serif;
+    font-size: 40px;
+    font-weight: 500;
+    margin: 40px;
+}
+
+.mm-ac{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 20%;
+}
+
+.information-of-account{
+margin-left: 22.5%;
+margin-top: -10px;
+height: 100%;
+}
+
+.name-info{
+    border: 1px solid rgb(204, 204, 204);
+    width: 30%;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    background-color: transparent;
+}
+
+.email-info{
+    border: 1px solid rgb(204, 204, 204);
+    width: 30%;
+    height: 30px;
+    padding: 0 10px;
+    border-radius: 10px;
+    font-family: 'Roboto', sans-serif;
+    line-height: 30px;
+    margin-top: 30px;
+    background-color: transparent;
+}
+
+.your-card{
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+    width: 32%;
+    background-color: #A297DC;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 30px;
+    height: 40px;
+    text-align: center;
+    line-height: 37px;
+}
+
+.signout{
+    box-shadow: -1px 1px 2px rgba(214, 212, 224, 0.2), 1px -1px 2px rgba(214, 212, 224, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(214, 212, 224, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(214, 212, 224, 0.5);
+    width: 32%;
+    background-color: #A297DC;
+    border: none;
+    border-radius: 6px;
+    color: white;
+    margin-top: 30px;
+    height: 40px;
+    text-align: center;
+    line-height: 37px;
+}
+
+.your-card:hover{
+    background: #b9b2d7;
+}
+
+.signout:hover{
+    background: #b9b2d7;
+}
+
+.cont-with-chel{
+    display: flex;
+    width: 100%;
+    
+}
+
+.cont-without-chel{
+    width: 90%;
+}
+.chel{
+    margin-left: -400px;
+    margin-top: 40px;
+}
+
+.info-account{
+    display: flex;
+}
+
+.change-account{
+    font-size: 30px;
+    color: rgb(175, 175, 175);
+    margin-left: -20%;
+    margin-top: 47px;
+}
+
+.change-account:hover{
+color: rgb(79, 79, 79);
+}
+
+.emailnamecont{
+   
+}

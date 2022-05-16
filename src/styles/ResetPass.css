@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&display=swap');
+
+.img-rest-pss{
+    width: 61%;
+}
+
+.reset-password-cont{
+    display: flex;
+    
+}
+
+.inpt-form{
+    width: 40%;
+    margin-left: 50px;
+    
+}
+
+.einpt{
+    margin-bottom: 30px;
+}
+
+.rest-pass-info{
+    margin-top: 10%;
+}
+
+.restpasstxt{
+    font-size: 30px;
+    margin-left: 47px;
+    margin-bottom: 30px;
+    font-weight: 600;
+    font-family: 'Roboto', sans-serif;
+}
+
+.ResetPassword{
+    background-color: #A297DC;
+    width: 209%;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    line-height: 40px;
+}

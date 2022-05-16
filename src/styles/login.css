@@ -9,6 +9,7 @@
 
 .roomimg{
     width: 61%;
+    margin-top: 0px;
     position: absolute;
 }
 
@@ -47,6 +48,7 @@ input{
     font-family: 'Roboto', sans-serif;
     font-size: 16px;
     font-weight: 600;
+    cursor: pointer;
 }
 .SignUp-Cont{
     display: flex;
@@ -56,4 +58,129 @@ input{
 .SignUpLink{
     margin-left:5px ;
     color:  #A297DC;
+}
+
+.contloginfo{
+    margin-left: 65%;
+    width: 15%;
+}
+.mnmn{
+    margin-top: 180px;
+}
+
+.SignIntxt{
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+    margin-bottom: 40px;
+}
+
+.emaillogin{
+    background-color: transparent;
+    border: 1px solid rgb(142, 142, 142);
+}
+
+.passlogin{
+    background-color: transparent;
+    border: 1px solid rgb(142, 142, 142);
+    margin-top: 30px;
+}
+
+.btn-login{
+    text-align: center;
+    background-color: #A297DC;
+    width: 210%;
+    height: 40px;
+    border-radius: 10px;
+    color: white;
+    line-height: 35px;
+    margin-top: 30px;
+}
+
+.Dont{
+    width: 300px;
+    white-space: nowrap;
+}
+
+.SignUpLink{
+    width: 100px;
+}
+
+.cont-log{
+    margin-left: 70%;
+    width: 10%;
+    margin-top: 7%;
+}
+.cont-log2{
+    margin-left: 70%;
+    width: 10%;
+    margin-top: 3%;
+}
+
+.cont-reg{
+    width: 50%;
+}
+
+.signuptxt{
+    margin-left: 65%;
+    margin-top: 80px;
+}
+
+.success-msg{
+    background-color: rgb(196, 219, 196);
+    width: 200%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 15px;
+    line-height: 35px;
+    color: white;
+}
+
+/* .success-msg1{
+    background-color: rgb(196, 219, 196);
+    width: 100%;
+    border-radius: 5px;
+    padding: 0 15px;
+    line-height: 35px;
+    color: white;
+    margin-top: 9%;
+    margin-left: -70px;
+} */
+
+.success-msg1 {
+    background-color: rgb(196, 219, 196);
+    background-repeat: 5px;
+    color: white;
+    margin-top: .8rem;
+}
+
+.success-msg2{
+    background-color: rgb(232, 138, 138);
+    width: 200%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 15px;
+    line-height: 35px;
+    color: white;
+}
+
+.success-msg4{
+    background-color: rgb(232, 138, 138);
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 15px;
+    line-height: 35px;
+    color: white;
+    margin-left: 45px;
+}
+
+.success-msg5{
+    background-color: rgb(179, 233, 160);
+    width: 80%;
+    height: 40px;
+    border-radius: 5px;
+    padding: 0 15px;
+    line-height: 35px;
+    color: white;
+    margin-left: 45px;
 }

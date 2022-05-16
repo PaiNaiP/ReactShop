@@ -34,6 +34,7 @@ body{
     border-top: 2px solid #CBCACB;
     margin-left: 20px;
     margin-right: 20px;
+    margin-bottom: 30px;
 }
 .cartproductcont{
     display: flex;
@@ -222,8 +223,64 @@ margin-top: -10px;
 .oform-cont{
     background: white;
     margin:20px;
+    border-radius: 12px;
+    display: flex;
+    box-shadow: -1px 1px 2px rgba(240, 240, 240, 0.2), 1px -1px 2px rgba(240, 240, 240, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(240, 240, 240, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(240, 240, 240, 0.5);
 }
 
 .of_pok{
     margin: 20px;
+    margin-top: 40px;
+    margin-left: 40px;
+    display: flex;
+    width: 35%;
+}
+
+.map{
+    width: 553px;
+    height: 450px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+}
+
+.pokinfocont{
+    display: flex;
+    flex-direction: column;
+    width: 45%;
+    margin-left: 10%;
+}
+
+.txtof{
+    margin: 20px;
+    font-family: 'Roboto', sans-serif;
+    margin-left: 40px;
+}
+
+.sama-class-nazovi {
+    display: flex;
+}
+
+.minl{
+    background: white;
+    margin: 40px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: -1px 1px 2px rgba(240, 240, 240, 0.2), 1px -1px 2px rgba(240, 240, 240, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(240, 240, 240, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(240, 240, 240, 0.5);
+}
+
+.mmmmbskt{
+    display: flex;
+    flex-direction: column;
+  
+}
+.storcr{
+    margin-top: 40px;
+    font-size: 30px;
+}
+
+.basckt{
+    width: 20%;
+    margin: 0 auto;
+    margin-bottom: 40px;
 }

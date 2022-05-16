@@ -1,25 +1,57 @@
-import React, {useState} from 'react'
+import React, {useState, useEffect} from 'react'
 import gr from '../img/Group 2.svg'
 import '../styles/addprod.css'
-import { storage, db } from '../config/config'
-import { collection, addDoc } from 'firebase/firestore'
+import { storage, db, auth } from '../config/config'
+import { onAuthStateChanged } from 'firebase/auth'
+import { collection, addDoc,doc, getDoc, getDocs, updateDoc, query, where } from 'firebase/firestore'
 import { ref, uploadString, getDownloadURL, uploadBytesResumable } from 'firebase/storage'
 import { getElementError } from '@testing-library/react'
-
+import bskt from '../img/Goodies - Crying.png'
+import { Navbar } from './Navbar'
+import { NotFound } from './NotFound'
 
 
 export const AddProducts = () => {
+
+    const [currentUse, setCurrentUse] = useState([])
+    function GetCurrentUser(){
+        const [user, setUser] = useState(null);
+        
+        
+        useEffect(()=>{
+          onAuthStateChanged(auth, (user) => {
+            if(user){
+              const docRef = doc(db, "users", user.uid);
+              getDoc(docRef).then(snapshot=>{
+                setUser(snapshot.data().Name)
+                
+              })
+              setCurrentUse(user)
+              console.log(currentUse)
+            }
+            else{
+              setUser(null)
+            }
+          })
+        }, [])
+        return user;
+      }
+      const users = GetCurrentUser();
     const [title, setTitle]=useState('');
     const [description, setDescription] = useState('');
     const [price, setPrice] = useState('')
     const [image, setImage] = useState(null)
-
+    const [quantity, seQuantity] = useState(0)
     const [imageError, setImageError] = useState('');
 
     const [successMsg, setSuccessMsg]=useState('')
     const [uploadError, setUploadError] = useState('');
 
     const [progress, setProgress]=useState(0 )
+const nn = async(q,b)=>{
+    
+    
+} 
 
     const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG']
     const handleProductImg=(e)=>{
@@ -41,8 +73,21 @@ export const AddProducts = () => {
                     price: Number(price),
                     url:url
                   });
+
             })
-        })
+            
+//             const q = query(collection(db, "products"), where("title", "==", title));
+// let b = ''
+// const querySnapshot =  getDocs(q);
+// querySnapshot.forEach((doc) => {
+//   // doc.data() is never undefined for query doc snapshots
+//   b= doc.id
+// });
+// updateDoc(q, {
+//     id: b
+//   });
+
+         })
     }
     const addtodb = async(url)=>{
         const docRef = await 
@@ -51,7 +96,8 @@ export const AddProducts = () => {
     const handleAddProducts=()=>{
        
     }
-  return (
+  return (<>
+    {currentUse.email == 'admin@admin.com'&&
     <div className="contprod">
     <div className='inpprod'>
          <h1>ADD PRODUCTS</h1>
@@ -76,6 +122,7 @@ export const AddProducts = () => {
             <p>Photo</p>
             <input id='file' type="file" className='ph-inp' onChange={handleProductImg}/>
         </div>
+        
         <button>ADD</button>
     </form>
     {imageError&&<>
@@ -89,6 +136,12 @@ export const AddProducts = () => {
     </div>
     <img src={gr} alt="" className='imgprod'/>
     </div>
-
+    }
+    {currentUse.email != 'admin@admin.com'&&
+    <>
+    <NotFound/>
+    </>
+}
+    </>
   )
     }

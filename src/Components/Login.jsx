@@ -35,7 +35,17 @@ export const Login = () => {
   return (
     <div className='cont' >
       <img src={room} alt="" className='roomimg'/>
+      <div className="cont-log">
       <h1>Sign In</h1>
+      {successMsg&&<>
+      <div className='success-msg'>{successMsg}</div>
+      <br></br>
+      </>}
+
+      {errorMsg&&<>
+      <div className='success-msg2'>{errorMsg}</div>
+      <br></br>
+      </>}
       <form action="" autoComplete='off' onSubmit={handleLogin}>
         <div className="email">
           <p>Email</p>
@@ -54,11 +64,13 @@ export const Login = () => {
           <div className="SignUpLink">Click here</div>
           </Link>
         </div>
+        <Link to="/ResetPassword" style={{ textDecoration: 'none' , color:'black'}}>
+          <div className="SignUpLinkm">Forget password?</div>
+          </Link>
         </form>
-        {successMsg&&<>
-      <div className='success-msg'>{successMsg}</div>
-      <br></br>
-      </>}
+       
     </div>
+    </div>
+   
   )
 }

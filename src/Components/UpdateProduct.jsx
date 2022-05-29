@@ -41,23 +41,22 @@ export const UpdateProduct = () => {
     const tit = document.getElementById('title')
     const des = document.getElementById('description')
     const pr = document.getElementById('price')
-
     const washingtonRef = doc(db, "products", jd);
-    if(tit.value!=null){
+    if(tit.value!=''){
       await updateDoc(washingtonRef, {
       title:tit.value
       });
     }
-    if(des.value!=null){
+    if(des.value!=''){
       await updateDoc(washingtonRef, {
       description:des.value
       });
     }
-    if(pr.value!=null){
+    if(pr.value!=''){
       await updateDoc(washingtonRef, {
       price:pr.value
       });
-    }
+  }
   }
 
   const updateImage = async(url)=>{

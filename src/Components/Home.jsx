@@ -11,11 +11,12 @@ import { Fotter } from './Fotter'
 import CustomScroll from 'react-custom-scroll';
 import {BsPlusCircleDotted} from 'react-icons/bs'
 import Carousel from 'react-bootstrap/Carousel'
-import img1 from '../img/image 7.svg'
+import img1 from '../img/Frame 24.svg'
 import img2 from '../img/image 8.svg'
 import img3 from '../img/image 9.svg'
 import { Fade } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
+
 
 export const Home = (props) => {
   let users = []
@@ -173,21 +174,27 @@ onAuthStateChanged(authh, (userr) => {
     <>
     <Navbar user={usere.Name} totalProducts={totalProducts} useruid={uidl}/>
     {/* {products.length > 0 && ( */}
-    <div className="slide-container">
+    {/* <div className="slide-container">
       <Fade>
         {fadeImages.map((fadeImage, index) => (
           <div className="each-fade" key={index}>
             <div className="image-container">
-              <img src={fadeImage.url} />
+              <img src={fadeImage.url} className='img-contsld' />
             </div>
           </div>
         ))}
       </Fade>
-    </div>
+    </div> */}
+    
     {emailAdm!='admin@admin.com'&&
+    <>
+    <div className="imgrekdiv">
+    <img src={img1} alt="" className='imgrek'/>
+    </div>
       <div className='products-box' >
         <Products products={products} addToCard = {addToCard} user={user}/>
       </div>
+      </>
     }
      {emailAdm=='admin@admin.com'&&<>
      <div className="add-to-product-button"onClick={handleAddProduct}>

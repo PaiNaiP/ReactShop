@@ -21,15 +21,14 @@ export const Navbar = ({user, totalProducts, uidl}) => {
 const [uikl, setUikl] = useState([])
 const [provAdmin, setProvAdmin] = useState([])
 const [provSuch, setProvSuch] = useState([])
-  console.log(uidl)
-  console.log(user)
+ 
   const navigate = useNavigate();
   const handleLogout=()=>{
     auth.signOut().then(()=>{
       navigate('/SignIn')
     })
   }
-  console.log(user)
+ 
   const [search, setSearch] = useState('')
   const [value, setValue] = useState('')
   const [prdcts, setPrdcts] =useState([])
@@ -45,7 +44,7 @@ const [provSuch, setProvSuch] = useState([])
   }
    useEffect(()=>{
     prodAll()
-    console.log(prdcts)
+    currentUser()
    },[])
   
    const filteredProducts = prdcts.filter(products=>{
@@ -80,13 +79,12 @@ function GetCurrentUser(){
   return user;
 }
 
-console.log(currentUse)
+
 let users = ''
 let uid = ''
 let emailforadmin = ''
 const returnUserInfo = async(userr)=>{
-  
-  console.log(userr)
+
   const uidd = userr.uid;
   console.log(uidd)
   const unsub = onSnapshot(doc(db, "users", uidd), (doc) => {
@@ -99,7 +97,6 @@ const returnUserInfo = async(userr)=>{
     setProvSuch(emailforadmin)
    
 });
-console.log(users)
 }
   const currentUser = async()=>{
     
@@ -109,7 +106,6 @@ onAuthStateChanged(authh, (userr) => {
   if(userr){
     console.log(userr)
    returnUserInfo(userr)
-   console.log(currentUse)
   }
   else{
     users='t'
@@ -124,10 +120,14 @@ onAuthStateChanged(authh, (userr) => {
 });
   }
 
-currentUser()
-// const handleClickAccount=() =>{
-// navigate('/Account')
-// }
+
+const handleSignIn=() =>{
+navigate('/SignIn')
+}
+
+const handleSignUp=() =>{
+  navigate('/SignUp')
+  }
   return (
     
     <div>
@@ -144,7 +144,7 @@ currentUser()
               onChange={(e)=>setValue(e.target.value)} id='input'/>
               {result>0&&<>
               <div className='searchBack'>
-              <Search products={filteredProducts} />
+              <Search  products={filteredProducts} />
               </div>
               </>
               }
@@ -154,12 +154,9 @@ currentUser()
               </div>
             </div>
             <div className="contbut">
-              <a href="/SignIn" className='su'>
-                <p>Sign In</p>
-                </a>
-                <a href="SignUp" className='su'>
-                <p>Sign Up</p>
-                </a>
+                <p onClick={handleSignIn}>Sign In</p>
+                <div className="rast" ></div>
+                <p onClick={handleSignUp}>Sign Up</p>
             </div>
           </div>
         </header>

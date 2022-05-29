@@ -55,6 +55,7 @@ const nn = async(q,b)=>{
 
     const types = ['image/jpg', 'image/jpeg', 'image/png', 'image/PNG']
     const handleProductImg=(e)=>{
+      if(title!=''&&description!=''&&price!=''){
         const selectedFile = e.target.files[0];
         setImage(selectedFile)
         const images = ref(storage, `/files/${selectedFile.name}`);
@@ -88,6 +89,10 @@ const nn = async(q,b)=>{
 //   });
 
          })
+        }
+        else{
+          alert('Заполните все поля!')
+        }
     }
     const addtodb = async(url)=>{
         const docRef = await 
@@ -123,7 +128,7 @@ const nn = async(q,b)=>{
             <input id='file' type="file" className='ph-inp' onChange={handleProductImg}/>
         </div>
         
-        <button>ADD</button>
+        
     </form>
     {imageError&&<>
         <div className='error-msg'>{imageError}</div>

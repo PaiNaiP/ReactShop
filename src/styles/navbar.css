@@ -175,9 +175,28 @@ p{
 
 .searchone{
     margin: 10px;
+    z-index: 1;
+
 }
 
-
+.srchn{
+    z-index: 1;
+    
+}
 .srchn:hover{
     background: #f1f1f1;
+}
+
+.contnavbar{
+    z-index: 1;
+    
+}
+
+.searchBack{
+    z-index: 1;
+    position: absolute;
+}
+
+.rast{
+    width: 20px;
 }

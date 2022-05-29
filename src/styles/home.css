@@ -71,14 +71,24 @@ body{
 .image-container{
   margin: 0 auto;
   margin-left: 24%;
-
+  z-index: 1;
 
 }
 
 .slide-container{
   margin-top: 40px;
+  
 }
 
+.searchBack {
+  z-index: 10;
+}
+
+.slide-container{
+  margin-top: 40px;
+  z-index: 1;
+  
+}
 .react-slideshow-container .default-nav:first-of-type{
 margin-top: -7px;
 margin-left: 0px;
@@ -86,4 +96,24 @@ margin-left: 0px;
 .react-slideshow-container .default-nav:last-of-type {
   margin-top: -7px;
 
+}
+
+.each-fade{
+  z-index: 1;
+  position: relative;
+}
+
+.img-contsld{
+  z-index: 1;
+}
+
+.image-container{
+  z-index: 1;
+}
+.imgrek{
+  width: 90%;
+  margin: 0 auto;
+  margin-top: 30px;
+  margin-left: 5%;
+  
 }

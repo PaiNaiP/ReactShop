@@ -71,7 +71,7 @@ export const Account = () => {
         const pass = document.getElementById('pass')
         const email = document.getElementById('email')
         const name = document.getElementById('name')
-        if(pass!=null)
+        if(pass.value!='')
         {
             const authh = getAuth()
             const user = auth.currentUser;
@@ -82,7 +82,7 @@ export const Account = () => {
             })
         }
 
-        if(email!=null)
+        if(email.value!='')
         {
             const authh = getAuth()
             const newEmail = email.value;
@@ -92,7 +92,7 @@ export const Account = () => {
                 console.log('change')
             })
         }
-        if(name!=null)
+        if(name.value!='')
         {
             updateNameInFirestore()
         }

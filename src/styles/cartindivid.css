@@ -127,6 +127,7 @@ body{
 }
 .pricecartcont{
     display: flex;
+    margin-top: 70px;
 }
 
 .card_cont{
@@ -224,7 +225,9 @@ margin-top: -10px;
     background: white;
     margin:20px;
     border-radius: 12px;
+    margin-top: 90px;
     display: flex;
+
     box-shadow: -1px 1px 2px rgba(240, 240, 240, 0.2), 1px -1px 2px rgba(240, 240, 240, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(240, 240, 240, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(240, 240, 240, 0.5);
 }
 
@@ -266,6 +269,7 @@ margin-top: -10px;
     margin: 40px;
     border-radius: 10px;
     text-align: center;
+    margin-top: 90px;
     box-shadow: -1px 1px 2px rgba(240, 240, 240, 0.2), 1px -1px 2px rgba(240, 240, 240, 0.2), -1px -1px 2px rgba(255, 255, 255, 0.9), 1px 1px 3px rgba(240, 240, 240, 0.9), inset 1px 1px 2px rgba(255, 255, 255, 0.3), inset -1px -1px 2px rgba(240, 240, 240, 0.5);
 }
 

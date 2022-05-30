@@ -67,7 +67,7 @@ export const Product = ({product}) => {
         </div>
         <div className="price-but-cont-prod-one">
           <div className="price-product-one">{product.price+'₽ '}</div>
-          <div className="button-card-prod-one" onClick={handleAddToCard}>BYE</div>
+          <div className="button-card-prod-one" onClick={handleAddToCard}>BUY</div>
         </div>
       </div>
     </div>

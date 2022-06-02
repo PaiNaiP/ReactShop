@@ -11,6 +11,7 @@ import { storage } from '../config/config';
 
 
 export const UpdateProduct = () => {
+  const {id} = useParams();
   const [progress, setProgress]=useState(0 )
   const [price, setPrice] = useState([])
   const [description, setDescription] = useState([])
@@ -18,7 +19,6 @@ export const UpdateProduct = () => {
   const [url, setUrl] = useState([])
   const [jd, setJd] = useState([])
   const [quantity, setQuantity] = useState([])
-  const {id} = useParams();
   const cities = [];
   const handleInformationOfProduct = async()=>{
       const q = query(collection(db, "products"), where("title", "==", id));
